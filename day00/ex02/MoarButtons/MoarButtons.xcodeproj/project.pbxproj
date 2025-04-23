@@ -1,0 +1,652 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD00EA182DAFF4FF0057C433 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = CD00EA172DAFF4FF0057C433 /* FlexLayout */; };
+		CD00EA1B2DAFF6670057C433 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = CD00EA1A2DAFF6670057C433 /* PinLayout */; };
+		CDAE22A42DB7DE3B002F3DB0 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CDAE22A32DB7DE3B002F3DB0 /* RxCocoa */; };
+		CDAE22A62DB7DE3B002F3DB0 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = CDAE22A52DB7DE3B002F3DB0 /* RxRelay */; };
+		CDAE22A82DB7DE3B002F3DB0 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CDAE22A72DB7DE3B002F3DB0 /* RxSwift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD00E9F92DAFF4740057C433 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD00E9DA2DAFF4720057C433 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD00E9E12DAFF4720057C433;
+			remoteInfo = MoarButtons;
+		};
+		CD00EA032DAFF4740057C433 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD00E9DA2DAFF4720057C433 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD00E9E12DAFF4720057C433;
+			remoteInfo = MoarButtons;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD00E9E22DAFF4720057C433 /* MoarButtons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoarButtons.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD00E9F82DAFF4740057C433 /* MoarButtonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoarButtonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD00EA022DAFF4740057C433 /* MoarButtonsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoarButtonsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		CD00EA0A2DAFF4740057C433 /* Exceptions for "MoarButtons" folder in "MoarButtons" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = CD00E9E12DAFF4720057C433 /* MoarButtons */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		CD00E9E42DAFF4720057C433 /* MoarButtons */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				CD00EA0A2DAFF4740057C433 /* Exceptions for "MoarButtons" folder in "MoarButtons" target */,
+			);
+			path = MoarButtons;
+			sourceTree = "<group>";
+		};
+		CD00E9FB2DAFF4740057C433 /* MoarButtonsTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MoarButtonsTests;
+			sourceTree = "<group>";
+		};
+		CD00EA052DAFF4740057C433 /* MoarButtonsUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MoarButtonsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD00E9DF2DAFF4720057C433 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDAE22A42DB7DE3B002F3DB0 /* RxCocoa in Frameworks */,
+				CD00EA1B2DAFF6670057C433 /* PinLayout in Frameworks */,
+				CDAE22A82DB7DE3B002F3DB0 /* RxSwift in Frameworks */,
+				CDAE22A62DB7DE3B002F3DB0 /* RxRelay in Frameworks */,
+				CD00EA182DAFF4FF0057C433 /* FlexLayout in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD00E9F52DAFF4740057C433 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD00E9FF2DAFF4740057C433 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD00E9D92DAFF4720057C433 = {
+			isa = PBXGroup;
+			children = (
+				CD00E9E42DAFF4720057C433 /* MoarButtons */,
+				CD00E9FB2DAFF4740057C433 /* MoarButtonsTests */,
+				CD00EA052DAFF4740057C433 /* MoarButtonsUITests */,
+				CD00E9E32DAFF4720057C433 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD00E9E32DAFF4720057C433 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD00E9E22DAFF4720057C433 /* MoarButtons.app */,
+				CD00E9F82DAFF4740057C433 /* MoarButtonsTests.xctest */,
+				CD00EA022DAFF4740057C433 /* MoarButtonsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD00E9E12DAFF4720057C433 /* MoarButtons */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD00EA0B2DAFF4740057C433 /* Build configuration list for PBXNativeTarget "MoarButtons" */;
+			buildPhases = (
+				CD00E9DE2DAFF4720057C433 /* Sources */,
+				CD00E9DF2DAFF4720057C433 /* Frameworks */,
+				CD00E9E02DAFF4720057C433 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				CD00E9E42DAFF4720057C433 /* MoarButtons */,
+			);
+			name = MoarButtons;
+			packageProductDependencies = (
+				CD00EA172DAFF4FF0057C433 /* FlexLayout */,
+				CD00EA1A2DAFF6670057C433 /* PinLayout */,
+				CDAE22A32DB7DE3B002F3DB0 /* RxCocoa */,
+				CDAE22A52DB7DE3B002F3DB0 /* RxRelay */,
+				CDAE22A72DB7DE3B002F3DB0 /* RxSwift */,
+			);
+			productName = MoarButtons;
+			productReference = CD00E9E22DAFF4720057C433 /* MoarButtons.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD00E9F72DAFF4740057C433 /* MoarButtonsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD00EA102DAFF4740057C433 /* Build configuration list for PBXNativeTarget "MoarButtonsTests" */;
+			buildPhases = (
+				CD00E9F42DAFF4740057C433 /* Sources */,
+				CD00E9F52DAFF4740057C433 /* Frameworks */,
+				CD00E9F62DAFF4740057C433 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD00E9FA2DAFF4740057C433 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CD00E9FB2DAFF4740057C433 /* MoarButtonsTests */,
+			);
+			name = MoarButtonsTests;
+			packageProductDependencies = (
+			);
+			productName = MoarButtonsTests;
+			productReference = CD00E9F82DAFF4740057C433 /* MoarButtonsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD00EA012DAFF4740057C433 /* MoarButtonsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD00EA132DAFF4740057C433 /* Build configuration list for PBXNativeTarget "MoarButtonsUITests" */;
+			buildPhases = (
+				CD00E9FE2DAFF4740057C433 /* Sources */,
+				CD00E9FF2DAFF4740057C433 /* Frameworks */,
+				CD00EA002DAFF4740057C433 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD00EA042DAFF4740057C433 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CD00EA052DAFF4740057C433 /* MoarButtonsUITests */,
+			);
+			name = MoarButtonsUITests;
+			packageProductDependencies = (
+			);
+			productName = MoarButtonsUITests;
+			productReference = CD00EA022DAFF4740057C433 /* MoarButtonsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD00E9DA2DAFF4720057C433 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					CD00E9E12DAFF4720057C433 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					CD00E9F72DAFF4740057C433 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = CD00E9E12DAFF4720057C433;
+					};
+					CD00EA012DAFF4740057C433 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = CD00E9E12DAFF4720057C433;
+					};
+				};
+			};
+			buildConfigurationList = CD00E9DD2DAFF4720057C433 /* Build configuration list for PBXProject "MoarButtons" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD00E9D92DAFF4720057C433;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CD00EA162DAFF4FF0057C433 /* XCRemoteSwiftPackageReference "FlexLayout" */,
+				CD00EA192DAFF6670057C433 /* XCRemoteSwiftPackageReference "PinLayout" */,
+				CDAE22A22DB7DE3B002F3DB0 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CD00E9E32DAFF4720057C433 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD00E9E12DAFF4720057C433 /* MoarButtons */,
+				CD00E9F72DAFF4740057C433 /* MoarButtonsTests */,
+				CD00EA012DAFF4740057C433 /* MoarButtonsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD00E9E02DAFF4720057C433 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD00E9F62DAFF4740057C433 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD00EA002DAFF4740057C433 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD00E9DE2DAFF4720057C433 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD00E9F42DAFF4740057C433 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD00E9FE2DAFF4740057C433 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD00E9FA2DAFF4740057C433 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD00E9E12DAFF4720057C433 /* MoarButtons */;
+			targetProxy = CD00E9F92DAFF4740057C433 /* PBXContainerItemProxy */;
+		};
+		CD00EA042DAFF4740057C433 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD00E9E12DAFF4720057C433 /* MoarButtons */;
+			targetProxy = CD00EA032DAFF4740057C433 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CD00EA0C2DAFF4740057C433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQZ4VJH454;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoarButtons/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.sma.MoarButtons;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD00EA0D2DAFF4740057C433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQZ4VJH454;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoarButtons/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.sma.MoarButtons;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CD00EA0E2DAFF4740057C433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD00EA0F2DAFF4740057C433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD00EA112DAFF4740057C433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQZ4VJH454;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.sma.MoarButtonsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoarButtons.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MoarButtons";
+			};
+			name = Debug;
+		};
+		CD00EA122DAFF4740057C433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQZ4VJH454;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.sma.MoarButtonsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoarButtons.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MoarButtons";
+			};
+			name = Release;
+		};
+		CD00EA142DAFF4740057C433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQZ4VJH454;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.sma.MoarButtonsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MoarButtons;
+			};
+			name = Debug;
+		};
+		CD00EA152DAFF4740057C433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQZ4VJH454;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.sma.MoarButtonsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MoarButtons;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD00E9DD2DAFF4720057C433 /* Build configuration list for PBXProject "MoarButtons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD00EA0E2DAFF4740057C433 /* Debug */,
+				CD00EA0F2DAFF4740057C433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD00EA0B2DAFF4740057C433 /* Build configuration list for PBXNativeTarget "MoarButtons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD00EA0C2DAFF4740057C433 /* Debug */,
+				CD00EA0D2DAFF4740057C433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD00EA102DAFF4740057C433 /* Build configuration list for PBXNativeTarget "MoarButtonsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD00EA112DAFF4740057C433 /* Debug */,
+				CD00EA122DAFF4740057C433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD00EA132DAFF4740057C433 /* Build configuration list for PBXNativeTarget "MoarButtonsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD00EA142DAFF4740057C433 /* Debug */,
+				CD00EA152DAFF4740057C433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CD00EA162DAFF4FF0057C433 /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/FlexLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+		CD00EA192DAFF6670057C433 /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/PinLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.5;
+			};
+		};
+		CDAE22A22DB7DE3B002F3DB0 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD00EA172DAFF4FF0057C433 /* FlexLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD00EA162DAFF4FF0057C433 /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayout;
+		};
+		CD00EA1A2DAFF6670057C433 /* PinLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD00EA192DAFF6670057C433 /* XCRemoteSwiftPackageReference "PinLayout" */;
+			productName = PinLayout;
+		};
+		CDAE22A32DB7DE3B002F3DB0 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDAE22A22DB7DE3B002F3DB0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		CDAE22A52DB7DE3B002F3DB0 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDAE22A22DB7DE3B002F3DB0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		CDAE22A72DB7DE3B002F3DB0 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDAE22A22DB7DE3B002F3DB0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CD00E9DA2DAFF4720057C433 /* Project object */;
+}
