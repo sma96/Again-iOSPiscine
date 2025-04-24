@@ -11,6 +11,22 @@ import PinLayout
 import RxSwift
 import RxCocoa
 
+
+enum Operator: Equatable {
+    case number(Int)
+    case plus
+    case minus
+    case divide
+    case multiply
+    case equal
+    case clear
+    case negate
+    
+    var isOperator: Bool {
+        self == .plus || self == .minus || self == .divide || self == .multiply || self == .equal || self == .clear || self == .negate
+    }
+}
+
 class CalculatorView: UIView {
     let resultLabel = {
         var label = UILabel()

@@ -11,12 +11,14 @@ import PinLayout
 import RxSwift
 import RxRelay
 
+
+
 class ViewController: UIViewController {
     var calculatorView = CalculatorView()
-    var elements = [String]()
-    var currentOperator: String?
+    var operators = [Operator]()
+    var currentOperator: Operator?
     var numberString = String()
-    var result = 0
+    var result: Double = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +26,8 @@ class ViewController: UIViewController {
         
         bind()
         view.addSubview(calculatorView)
-//        view.addSubview(viewA)
-//        view.addSubview(viewB)
+        //        view.addSubview(viewA)
+        //        view.addSubview(viewB)
     }
     
     let disposeBag = DisposeBag()
@@ -38,23 +40,23 @@ class ViewController: UIViewController {
     
     func bind() {
         Observable.merge(
-            calculatorView.oneButton.rx.tap.map { return "1" },
-            calculatorView.twoButton.rx.tap.map { return "2" },
-            calculatorView.threeButton.rx.tap.map { return"3" },
-            calculatorView.fourButton.rx.tap.map { return "4" },
-            calculatorView.fiveButton.rx.tap.map { return "5" },
-            calculatorView.sixButton.rx.tap.map { return "6" },
-            calculatorView.sevenButton.rx.tap.map { return "7" },
-            calculatorView.eightButton.rx.tap.map { return "8" },
-            calculatorView.nineButton.rx.tap.map { return "9" },
-            calculatorView.zeroButton.rx.tap.map { return "0" },
-            calculatorView.plusButton.rx.tap.map { return "+" },
-            calculatorView.minusButton.rx.tap.map { return "-" },
-            calculatorView.multiplyButton.rx.tap.map { return "*" },
-            calculatorView.divideButton.rx.tap.map { return "/" },
-            calculatorView.allCleanButton.rx.tap.map { return "AC" },
-            calculatorView.negativeButton.rx.tap.map { return "NEG" },
-            calculatorView.equalButton.rx.tap.map { return "=" }
+            calculatorView.oneButton.rx.tap.map { return Operator.number(1) },
+            calculatorView.twoButton.rx.tap.map { return Operator.number(2) },
+            calculatorView.threeButton.rx.tap.map { return Operator.number(3) },
+            calculatorView.fourButton.rx.tap.map { return Operator.number(4) },
+            calculatorView.fiveButton.rx.tap.map { return Operator.number(5) },
+            calculatorView.sixButton.rx.tap.map { return Operator.number(6) },
+            calculatorView.sevenButton.rx.tap.map { return Operator.number(7) },
+            calculatorView.eightButton.rx.tap.map { return Operator.number(8) },
+            calculatorView.nineButton.rx.tap.map { return Operator.number(9) },
+            calculatorView.zeroButton.rx.tap.map { return Operator.number(0) },
+            calculatorView.plusButton.rx.tap.map { return Operator.plus },
+            calculatorView.minusButton.rx.tap.map { return Operator.minus },
+            calculatorView.multiplyButton.rx.tap.map { return Operator.multiply },
+            calculatorView.divideButton.rx.tap.map { return Operator.divide },
+            calculatorView.allCleanButton.rx.tap.map { return Operator.clear },
+            calculatorView.negativeButton.rx.tap.map { return Operator.negate },
+            calculatorView.equalButton.rx.tap.map { return Operator.equal }
         ).subscribe(onNext: { [weak self] in
             guard let self = self else { return }
             
@@ -65,15 +67,15 @@ class ViewController: UIViewController {
     }
     
     func clean() {
-        elements.removeAll()
+        operators.removeAll()
+        currentOperator = nil
+    }
+    
+    func allClean() {
+        operators.removeAll()
         currentOperator = nil
         result = 0
         numberString = ""
-    }
-    func allClean() {
-        elements.removeAll()
-        currentOperator = nil
-        result = 0
         calculatorView.resultLabel.text = ""
     }
     
@@ -82,101 +84,137 @@ class ViewController: UIViewController {
     }
     
     func calculate() {
-        for element in elements {
-            calculate(element)
+        for op in operators {
+            calculate(with: op)
         }
         
         if let operatorSign = currentOperator {
-            calculate(with: operatorSign)
+            calculate(operatorSign)
         }
     }
     
-    func calculate(_ element: String) {
-        switch element {
-        case "+":
+    func calculate(with op: Operator) {
+        switch op {
+        case .plus:
             if let operatorSign = currentOperator {
-                calculate(with: operatorSign)
+                calculate(operatorSign)
             } else {
-                result = Int(numberString)!
+                print("numberstirng = \(numberString)")
+                result = Double(numberString)!
             }
             
-            currentOperator = "+"
+            currentOperator = .plus
             numberString = ""
-        case "-":
+        case .minus:
             if let operatorSign = currentOperator {
-                calculate(with: operatorSign)
+                calculate(operatorSign)
             } else {
-                result = Int(numberString)!
+                result = Double(numberString)!
             }
-
-            currentOperator = "-"
+            
+            currentOperator = .minus
             numberString = ""
-        case "/":
+        case .divide:
             if let operatorSign = currentOperator {
-                calculate(with: operatorSign)
+                calculate(operatorSign)
             } else {
-                result = Int(numberString)!
+                result = Double(numberString)!
             }
-
-            currentOperator = "/"
+            
+            currentOperator = .divide
             numberString = ""
-        case "*":
+        case .multiply:
             if let operatorSign = currentOperator {
-                calculate(with: operatorSign)
+                calculate(operatorSign)
             } else {
-                result = Int(numberString)!
+                result = Double(numberString)!
             }
-
-            currentOperator = "*"
+            
+            currentOperator = .multiply
             numberString = ""
+        case .number(let number):
+            numberString += "\(number)"
         default:
-            numberString += element
+            break
         }
     }
-
-    func calculate(with op: String) {
+    
+    func calculate(_ op: Operator) {
         switch op {
-        case "+":
-            let num = Int(self.numberString)!
-
+        case .plus:
+            let num = Double(self.numberString)!
+            
             result += num
-        case "-":
-            let num = Int(self.numberString)!
+
+        case .minus:
+            let num = Double(self.numberString)!
             
             result -= num
-        case "/":
-            let num = Int(self.numberString)!
+
+        case .divide:
+            let num = Double(self.numberString)!
+            let divided = result / num
             
-            result /= num
-        case "*":
-            let num = Int(self.numberString)!
+            result = divided.isInfinite ? 0 : divided
+            
+        case .multiply:
+            let num = Double(self.numberString)!
             
             result *= num
         default:
             break
-            
         }
     }
     
-    func makeExpression(_ input: String) {
-        if currentOperator == "=" {
-            calculatorView.resultLabel.text = ""
-            currentOperator = nil
+    func makeExpression(_ op: Operator) {
+        if currentOperator == .equal {
+            if !op.isOperator {
+                calculatorView.resultLabel.text = ""
+                currentOperator = nil
+                numberString = ""
+            } else {
+                currentOperator = nil
+            }
         }
-        switch input {
-        case "AC":
+        print("number = \(numberString)")
+        
+        switch op {
+        case .number(let number):
+            operators.append(op)
+            calculatorView.resultLabel.text! += "\(number)"
+        case .plus:
+            operators.append(op)
+            calculatorView.resultLabel.text! += "+"
+        case .minus:
+            operators.append(op)
+            calculatorView.resultLabel.text! += "-"
+        case .divide:
+            operators.append(op)
+            calculatorView.resultLabel.text! += "/"
+        case .multiply:
+            operators.append(op)
+            calculatorView.resultLabel.text! += "*"
+        case .clear:
             allClean()
-        case "NEG":
-            print("neg")
-        case "=":
+        case .negate:
+            negative()
+        case .equal:
             calculate()
-            calculatorView.resultLabel.text = "\(result)"
+            let result = formatNumber(result)
+            calculatorView.resultLabel.text = result
+            numberString = result
             clean()
-            currentOperator = "="
-        default:
-            elements.append(input)
-            calculatorView.resultLabel.text! += input
+            currentOperator = .equal
         }
     }
+    
+    func formatNumber(_ value: Double) -> String {
+        let formatter = NumberFormatter()
+        
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 10
+        formatter.numberStyle = .decimal
+        
+        return formatter.string(from: NSNumber(value: value)) ?? "\(value)"
+    }
 }
-
