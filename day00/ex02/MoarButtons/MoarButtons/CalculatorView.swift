@@ -14,17 +14,45 @@ import RxCocoa
 
 enum Operator: Equatable {
     case number(Int)
-    case plus
-    case minus
-    case divide
-    case multiply
+    case plus(String)
+    case minus(String)
+    case divide(String)
+    case multiply(String)
     case equal
     case clear
     case negate
     
     var isOperator: Bool {
-        self == .plus || self == .minus || self == .divide || self == .multiply || self == .equal || self == .clear || self == .negate
+        switch self {
+        case .number:
+            return false
+        default:
+            return true
+        }
     }
+    
+    func calculate(_ lhs: Double, _ rhs: Double) -> Double {
+        switch self {
+        case .plus(_):
+            return lhs + rhs
+        case .minus(_):
+            return lhs - rhs
+        case .divide(_):
+            return lhs / rhs
+        case .multiply(_):
+            return lhs * rhs            
+        default:
+            return 0
+        }
+    }
+    var symbolValue: String? {
+           switch self {
+           case .plus(let value), .minus(let value), .divide(let value), .multiply(let value):
+               return value
+           default:
+               return nil
+           }
+       }
 }
 
 class CalculatorView: UIView {

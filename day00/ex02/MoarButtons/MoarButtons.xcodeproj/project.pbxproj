@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CD00EA182DAFF4FF0057C433 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = CD00EA172DAFF4FF0057C433 /* FlexLayout */; };
 		CD00EA1B2DAFF6670057C433 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = CD00EA1A2DAFF6670057C433 /* PinLayout */; };
+		CD4B0AAC2DBDFAA8009A2B23 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = CD4B0AAB2DBDFAA8009A2B23 /* ReactorKit */; };
 		CDAE22A42DB7DE3B002F3DB0 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CDAE22A32DB7DE3B002F3DB0 /* RxCocoa */; };
 		CDAE22A62DB7DE3B002F3DB0 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = CDAE22A52DB7DE3B002F3DB0 /* RxRelay */; };
 		CDAE22A82DB7DE3B002F3DB0 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CDAE22A72DB7DE3B002F3DB0 /* RxSwift */; };
@@ -77,6 +78,7 @@
 				CD00EA1B2DAFF6670057C433 /* PinLayout in Frameworks */,
 				CDAE22A82DB7DE3B002F3DB0 /* RxSwift in Frameworks */,
 				CDAE22A62DB7DE3B002F3DB0 /* RxRelay in Frameworks */,
+				CD4B0AAC2DBDFAA8009A2B23 /* ReactorKit in Frameworks */,
 				CD00EA182DAFF4FF0057C433 /* FlexLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +145,7 @@
 				CDAE22A32DB7DE3B002F3DB0 /* RxCocoa */,
 				CDAE22A52DB7DE3B002F3DB0 /* RxRelay */,
 				CDAE22A72DB7DE3B002F3DB0 /* RxSwift */,
+				CD4B0AAB2DBDFAA8009A2B23 /* ReactorKit */,
 			);
 			productName = MoarButtons;
 			productReference = CD00E9E22DAFF4720057C433 /* MoarButtons.app */;
@@ -230,6 +233,7 @@
 				CD00EA162DAFF4FF0057C433 /* XCRemoteSwiftPackageReference "FlexLayout" */,
 				CD00EA192DAFF6670057C433 /* XCRemoteSwiftPackageReference "PinLayout" */,
 				CDAE22A22DB7DE3B002F3DB0 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				CD4B0AAA2DBDFAA8009A2B23 /* XCRemoteSwiftPackageReference "ReactorKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CD00E9E32DAFF4720057C433 /* Products */;
@@ -317,7 +321,7 @@
 				INFOPLIST_FILE = MoarButtons/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -345,7 +349,7 @@
 				INFOPLIST_FILE = MoarButtons/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -610,6 +614,14 @@
 				minimumVersion = 1.10.5;
 			};
 		};
+		CD4B0AAA2DBDFAA8009A2B23 /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactorKit/ReactorKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.0;
+			};
+		};
 		CDAE22A22DB7DE3B002F3DB0 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -630,6 +642,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CD00EA192DAFF6670057C433 /* XCRemoteSwiftPackageReference "PinLayout" */;
 			productName = PinLayout;
+		};
+		CD4B0AAB2DBDFAA8009A2B23 /* ReactorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD4B0AAA2DBDFAA8009A2B23 /* XCRemoteSwiftPackageReference "ReactorKit" */;
+			productName = ReactorKit;
 		};
 		CDAE22A32DB7DE3B002F3DB0 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
