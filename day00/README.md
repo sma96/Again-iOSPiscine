@@ -1,6 +1,6 @@
 # MoarButtons
 
-최신 기술 트렌드에 맞는 프레임워크로 만든 iOS 간단한 계산기 앱
+최신 기술 트렌드에 맞는 프레임워크로 구현한 간단한 iOS 계산기 앱
 
 RxSwift 및 ReactorKit으로 반응형 아키텍처를 설계하고, FlexLayout과 PinLayout으로 최적화된 계산기 화면 레이아웃을 구현한 프로젝트입니다.
 
