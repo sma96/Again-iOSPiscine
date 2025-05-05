@@ -9,6 +9,7 @@ import UIKit
 import FlexLayout
 import PinLayout
 import RxSwift
+import RxCocoa
 import RxRelay
 import ReactorKit
 
@@ -29,6 +30,7 @@ class ViewController: UIViewController {
         
         calculatorView.pin.vCenter().left(view.pin.safeArea).right(view.pin.safeArea).height(55%)
     }
+    
     func formatNumber(_ value: Double) -> String {
         let formatter = NumberFormatter()
         
@@ -60,12 +62,15 @@ extension ViewController: View {
             calculatorView.multiplyButton.rx.tap.map { Reactor.Action.tapMultiply },
             calculatorView.divideButton.rx.tap.map { Reactor.Action.tapDivide },
             calculatorView.allCleanButton.rx.tap.map { Reactor.Action.tapClear },
-            calculatorView.negativeButton.rx.tap.map { Reactor.Action.tapNegate },
-            calculatorView.equalButton.rx.tap.map { Reactor.Action.tapEqual }
+            calculatorView.negativeButton.rx.tap.map { Reactor.Action.tapNegate }
         )
         .bind(to: reactor.action)
         .disposed(by: disposeBag)
         
+//        calculatorView.rx.sendButtonTap.map {
+//            Reactor.Action.tapEqual
+//        }.bind(to: reactor.action)
+//            .dispose(by: disposeBag)
         // state
         reactor.state
             .map {
@@ -77,5 +82,13 @@ extension ViewController: View {
             }
             .bind(to: calculatorView.resultLabel.rx.text)
             .disposed(by: disposeBag)
+    }
+}
+
+extension Reactive where Base : CalculatorView {
+    var sendButtonTap: ControlEvent<String> {
+        let source = base.equalButton.rx.tap.withLatestFrom(base.textfield.rx.text.orEmpty)
+        
+        return ControlEvent(events: source)
     }
 }

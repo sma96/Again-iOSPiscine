@@ -17,7 +17,7 @@ class CalculatorViewReactor: Reactor {
         case tapDivide
         case tapClear
         case tapNegate
-        case tapEqual
+        case tapEqual(String)
     }
     
     enum Mutation {
@@ -60,7 +60,8 @@ extension CalculatorViewReactor {
             return Observable.just(.clean)
         case .tapNegate:
             return Observable.just(.negate)
-        case .tapEqual:
+        case .tapEqual(let str):
+            print("str = \(str)")
             return Observable.just(.calculate)
         }
     }

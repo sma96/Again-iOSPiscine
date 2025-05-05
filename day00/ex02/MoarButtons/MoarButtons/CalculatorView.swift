@@ -56,6 +56,15 @@ enum Operator: Equatable {
 }
 
 class CalculatorView: UIView {
+    
+    let textfield = {
+        var tf = UITextField()
+        
+        tf.text = "hello sma!"
+        
+        return tf
+    }()
+    
     let resultLabel = {
         var label = UILabel()
         
